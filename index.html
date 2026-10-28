@@ -1,0 +1,5 @@
+---
+layout: default
+title: 전체 글
+---
+<h1>전체 글</h1><p class="note">분야별 프로젝트 기록입니다.</p><div class="posts">{% for post in site.posts %}<article><p class="meta">{{ post.categories | join: ' / ' | escape }}</p><h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2><p>{{ post.summary | escape }}</p></article>{% endfor %}</div><h2 class="section-title">분야별 글</h2>{% for category in site.categories %}<section id="{{ category[0] | slugify }}"><h3>{{ category[0] | escape }}</h3><ul>{% for post in category[1] %}<li><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>{% endfor %}</ul></section>{% endfor %}

@@ -1,0 +1,6 @@
+title: 김선호의 임베디드 개발 기록
+url: "https://sunhokim1.github.io"
+baseurl: ""
+permalink: /:categories/:title/
+markdown: kramdown
+exclude: [README.md]
